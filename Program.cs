@@ -6,7 +6,12 @@ namespace template_csharp_class_of_your_choice
     {
         static void Main(string[] args)
         {
-            
+
+
+
+
+
+
         }
     }
 }
