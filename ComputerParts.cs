@@ -48,7 +48,7 @@ namespace template_csharp_class_of_your_choice
             }
             else
             {
-                return "Amd";     // I know doing it this way can cause problems
+                return "Amd";     // I know doing it this way can cause problems however I do error checking later
             }
 
         }
