@@ -23,19 +23,7 @@ namespace template_csharp_class_of_your_choice
         {
         }
 
-        //public ComputerParts(string cpu, string gpu, string motherboard, string ram, string sdd, string hdd, string powersupply, string cooling, string pccase)
-        //{
-        //    this.CPU = cpu;
-        //    this.GPU = gpu;
-        //    this.MotherBoard = motherboard;
-        //    this.RAM = ram;
-        //    this.SDD = sdd;
-        //    this.HDD = hdd;
-        //    this.PowerSupply = powersupply;
-        //    this.Cooling = cooling;
-        //    this.PCcase = pccase;
-        //}
-
+    
 
         public string cpu_brand()
         {
@@ -102,7 +90,7 @@ namespace template_csharp_class_of_your_choice
 
             Console.WriteLine("\nHere a list of available CPUs in are store:\n\nChoose the number");
 
-            for (int count = 0; count < 8; count++) // qustion abount switching 8 with list
+            for (int count = 0; count < 8; count++) // Switching 8 with the list somehow. I think it possible but its a string
             {
                 Console.WriteLine(gpulist[count]);
             }
@@ -258,3 +246,5 @@ namespace template_csharp_class_of_your_choice
 
     }
 }
+
+
