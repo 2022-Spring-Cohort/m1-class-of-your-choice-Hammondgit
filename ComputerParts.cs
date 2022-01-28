@@ -16,25 +16,25 @@ namespace template_csharp_class_of_your_choice
         public string HDD { get; set; }
         public string PowerSupply { get; set; }
         public string Cooling { get; set; }
-        public string PCCcase { get; set; }
+        public string PCcase { get; set; }
 
 
         public ComputerParts()
         {
         }
 
-        public ComputerParts(string cpu, string gpu, string motherboard, string ram, string sdd, string hdd, string powersupply, string cooling, string pccase)
-        {
-            this.CPU = cpu;
-            this.GPU = gpu;
-            this.MotherBoard = motherboard;
-            this.RAM = ram;
-            this.SDD = sdd;
-            this.HDD = hdd;
-            this.PowerSupply = powersupply;
-            this.Cooling = cooling;
-            this.PCCcase = cooling;
-        }
+        //public ComputerParts(string cpu, string gpu, string motherboard, string ram, string sdd, string hdd, string powersupply, string cooling, string pccase)
+        //{
+        //    this.CPU = cpu;
+        //    this.GPU = gpu;
+        //    this.MotherBoard = motherboard;
+        //    this.RAM = ram;
+        //    this.SDD = sdd;
+        //    this.HDD = hdd;
+        //    this.PowerSupply = powersupply;
+        //    this.Cooling = cooling;
+        //    this.PCcase = pccase;
+        //}
 
 
         public string cpu_brand()
@@ -48,17 +48,17 @@ namespace template_csharp_class_of_your_choice
             }
             else
             {
-                return "Amd";     // I know doing it this way can cause problems however I do error checking later
+                return "AMD";     // I know doing it this way can cause problems however I do error checking later
             }
 
         }
 
 
-        public string Intel_CPUlist()
+        public void Intel_CPUlist()
         {
             Console.Clear();
             string[] cpulist = new string[4] { "\n1.Intel Core i3-12100", "2.Intel Core i5-12400", "3.Intel Core i7-8700K", "4.Intel Core i9-9900K" };
-             
+
             Console.WriteLine("\nHere a list of available CPUs in are store:\n\nChoose the number");
 
             for (int count = 0; count < 4; count++)
@@ -69,11 +69,11 @@ namespace template_csharp_class_of_your_choice
             int i = Convert.ToInt32(Console.ReadLine());
 
 
-            return this.CPU = cpulist[i - 1]; // I can method to void but im goint to right now
+            this.CPU = cpulist[i - 1]; 
         }
 
 
-        public string AMD_CPUlist()
+        public void AMD_CPU_list()
         {
 
             Console.Clear();
@@ -88,13 +88,13 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return cpulist[i - 1];
+            this.CPU = cpulist[i - 1];
         }
 
 
 
 
-        public string GPU_List()
+        public void GPU_List()
         {
 
             Console.Clear();
@@ -109,15 +109,15 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return gpulist[i - 1];
+            this.GPU = gpulist[i - 1];
 
         }
 
 
-        public string motherboard_list()
+        public void motherboard_list()
         {
             Console.Clear();
-            string[] MBList = new string[4] { "\n1.Bear minimum to run", "2.standard motherboard ", "3.Look at that more usb slots and features :)", "4.Rainbow colors EVERWHERE!!!!" };
+            string[] MBList = new string[4] { "\n1.Bear minimum to run", "2.Standard motherboard ", "3.Look at that more usb slots and features :)", "4.Rainbow colors EVERWHERE!!!!" };
 
             Console.WriteLine("\nHere a list of available motherboards in the store:\nChoose the number");
 
@@ -128,12 +128,12 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return MBList[i - 1];
+            this.MotherBoard = MBList[i - 1];
 
         }
 
 
-        public string Ram_list()
+        public void Ram_list()
         {
             Console.Clear();
             string[] RamList = new string[6] { "\n1.2GB of ram - If you hate yourself get this one", "2.4GB of ram - ok its usable   ", "3.8GB or ram - you looking good", "4.16GB - you wont have any problems", "5.32GB of ram -overkill", "6.64GB of ram...NASA called they want there ram back " };
@@ -150,12 +150,12 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return RamList[i - 1];
+            this.RAM = RamList[i - 1];
 
         }
 
 
-        public string SDD_or_HDD_list()
+        public void SDD_or_HDD_list()
         {
 
             Console.Clear();
@@ -174,7 +174,7 @@ namespace template_csharp_class_of_your_choice
 
                 int i = Convert.ToInt32(Console.ReadLine());
 
-                return SDDlist[i - 1];
+                this.SDD = SDDlist[i - 1];
 
             }
             else
@@ -190,14 +190,31 @@ namespace template_csharp_class_of_your_choice
 
                 int i = Convert.ToInt32(Console.ReadLine());
 
-                return HDDlist[i - 1];
+                this.HDD = HDDlist[i - 1];
 
             }
 
         }
 
 
-        public string PowerSupply_list()
+
+
+        public void cooling_list()
+        {
+            Console.Clear();
+            Console.WriteLine("\nHere your two options. \nChoose the number");
+            string[] Coolinglist = new string[2] { "1.The chad liquad cooling", "2.Not so chad fan cooling..." };
+            for (int count = 0; count < 2; count++)
+            {
+                Console.WriteLine(Coolinglist[count]);
+            }
+
+            int i = Convert.ToInt32(Console.ReadLine());
+
+            this.Cooling = Coolinglist[i - 1];
+        }
+
+        public void PowerSupply_list()
         {
             Console.Clear();
             Console.WriteLine("\nHere a list of available SDD in the store:\nChoose the number");
@@ -210,27 +227,11 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return PSlist[i - 1];
+            this.PowerSupply = PSlist[i - 1];
 
         }
 
-        public string cooling_list()
-        {
-            Console.Clear();
-            Console.WriteLine("\nHere your two options. \nChoose the number");
-            string[] Coolinglist = new string[2] { "1.The chad liquad cooling", "2.Not so chad fan cooling..." };
-            for (int count = 0; count < 2; count++)
-            {
-                Console.WriteLine(Coolinglist[count]);
-            }
-
-            int i = Convert.ToInt32(Console.ReadLine());
-
-            return Coolinglist[i - 1];
-        }
-
-
-        public string pc_case_list()
+        public void pc_case_list()
         {
             Console.Clear();
             Console.WriteLine("\nHere your options. \nChoose the number\n\nWe are not responsible for parts not fitting inside the case. ");
@@ -242,11 +243,17 @@ namespace template_csharp_class_of_your_choice
             }
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return Caselist[i - 1];
+            this.PCcase = Caselist[i - 1];
         }
 
 
-        
+        public override string ToString()
+        {
+
+            return $" CPU: {this.CPU}\n GPU: {this.GPU}\n Motherboard: {this.MotherBoard}\n Ram: {RAM}\n Storge: {this.RAM}\n Power Supply: {this.PowerSupply}\n PC Cooling: {this.Cooling}\n Case: {this.PCcase} ";
+
+        }
+
 
 
     }
