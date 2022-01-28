@@ -4,6 +4,17 @@ namespace template_csharp_class_of_your_choice
 {
     class Program
     {
+        // Things I wanted to do but ran out of time for(Missing features)
+        /** 
+         1. having prices but relaize that im going to have to make a shope class, Prices, and do inheritance. Basicly doing something that would take way too long base on my ability right now.
+         2. Error checking didnt get the chance to do it  
+         3. On the far right side of the menu and let the user keep track of what they pick
+         4. Leting the user pick both SSD and HDD 
+
+
+        Sorry I didnt get the features done by the deadline user 
+        Dont get mad and send strongly worded letter to me. Im such a bad dev ):
+        **/
         static void Main(string[] args)
         {
             //Gobal variables
