@@ -23,18 +23,18 @@ namespace template_csharp_class_of_your_choice
         {
         }
 
-        //public ComputerParts(string cpu, string gpu, string motherboard, string ram, string sdd, string hdd, string powersupply, string cooling, string pccase)
-        //{
-        //    this.CPU = cpu;
-        //    this.GPU = gpu;
-        //    this.MotherBoard = motherboard;
-        //    this.RAM = ram;
-        //    this.SDD = sdd;
-        //    this.HDD = hdd;
-        //    this.PowerSupply = powersupply;
-        //    this.Cooling = cooling;
-        //    this.PCCcase = cooling;
-        //}
+        public ComputerParts(string cpu, string gpu, string motherboard, string ram, string sdd, string hdd, string powersupply, string cooling, string pccase)
+        {
+            this.CPU = cpu;
+            this.GPU = gpu;
+            this.MotherBoard = motherboard;
+            this.RAM = ram;
+            this.SDD = sdd;
+            this.HDD = hdd;
+            this.PowerSupply = powersupply;
+            this.Cooling = cooling;
+            this.PCCcase = cooling;
+        }
 
 
         public string cpu_brand()
@@ -48,19 +48,17 @@ namespace template_csharp_class_of_your_choice
             }
             else
             {
-                return "Amd";     // I know doing it this way can cause problems
+                return "Amd";     // I know doing it this way can cause problems however I do error checking later
             }
 
         }
 
 
-        List<string> parts = new List<string>();
-
         public string Intel_CPUlist()
         {
             Console.Clear();
             string[] cpulist = new string[4] { "\n1.Intel Core i3-12100", "2.Intel Core i5-12400", "3.Intel Core i7-8700K", "4.Intel Core i9-9900K" };
-
+             
             Console.WriteLine("\nHere a list of available CPUs in are store:\n\nChoose the number");
 
             for (int count = 0; count < 4; count++)
@@ -70,7 +68,8 @@ namespace template_csharp_class_of_your_choice
 
             int i = Convert.ToInt32(Console.ReadLine());
 
-            return cpulist[i - 1];
+
+            return this.CPU = cpulist[i - 1]; // I can method to void but im goint to right now
         }
 
 
@@ -180,7 +179,7 @@ namespace template_csharp_class_of_your_choice
             }
             else
             {
-                
+
                 Console.WriteLine("\nHere a list of available SDD in the store:\nChoose the number");
                 string[] HDDlist = new string[4] { "1.250GB of storge", "2.500GB of storge", "3.1TB of storge", "4.2TB of storge" };
 
@@ -235,7 +234,8 @@ namespace template_csharp_class_of_your_choice
         {
             Console.Clear();
             Console.WriteLine("\nHere your options. \nChoose the number\n\nWe are not responsible for parts not fitting inside the case. ");
-            string[] Caselist = new string[3] { "1.Small", "2,Medium","3.Large" };
+            string[] Caselist = new string[3] { "1.Small", "2,Medium", "3.Large" };
+
             for (int count = 0; count < 3; count++)
             {
                 Console.WriteLine(Caselist[count]);
@@ -244,6 +244,10 @@ namespace template_csharp_class_of_your_choice
 
             return Caselist[i - 1];
         }
+
+
+        
+
 
     }
 }
